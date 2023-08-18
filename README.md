@@ -1,10 +1,10 @@
-<h2 align='center'><samp>stimulus-vite-helpers</samp></h2>
+<h2 align='center'><samp>stimulus-vite-helpers-2</samp></h2>
 
-<p align='center'>Helpers to easily load all your Stimulus controllers when using Vite.js</p>
+<p align='center'>Helpers to easily load your Stimulus controllers when using Vite.js</p>
 
 <p align='center'>
-  <a href='https://www.npmjs.com/package/stimulus-vite-helpers'>
-    <img src='https://img.shields.io/npm/v/stimulus-vite-helpers?color=222&style=flat-square'>
+  <a href='https://www.npmjs.com/package/stimulus-vite-helpers-2'>
+    <img src='https://img.shields.io/npm/v/stimulus-vite-helpers-2?color=222&style=flat-square'>
   </a>
   <a href='https://github.com/ElMassimo/vite_ruby/blob/master/LICENSE.txt'>
     <img src='https://img.shields.io/badge/license-MIT-blue.svg'>
@@ -14,14 +14,13 @@
 <br>
 
 [globEager]: https://vitejs.dev/guide/features.html#glob-import
-[jumpstart]: https://github.com/ElMassimo/jumpstart-vite
+[stimulusvitehelpers]: https://github.com/ElMassimo/stimulus-vite-helpers
 [stimulus handbook]: https://stimulus.hotwire.dev/handbook/installing
 [stimulus]: https://github.com/hotwired/stimulus
 [vite_rails]: https://vite-rails.netlify.app
 [vite-plugin-stimulus-hmr]: https://github.com/ElMassimo/vite-plugin-stimulus-hmr
 
-This plugin was extracted out of [Jumpstart Rails with Vite.js][jumpstart], a starter
-template that you can use to start your next Rails app.
+This package is a fork of [stimulus-vite-helpers][stimulusvitehelpers], and will exist untill author accept my PR https://github.com/ElMassimo/stimulus-vite-helpers/pull/11 🤠
 
 If you are looking for a simple way to integrate Vite.js in Rails, check out <kbd>[vite_rails]</kbd>.
 
@@ -30,20 +29,20 @@ If you would like to enable HMR for your Stimulus controllers, check out <kbd>[v
 ## Installation 💿
 
 ```bash
-npx ni stimulus-vite-helpers
+npx ni stimulus-vite-helpers-2
 ```
 
 ## Usage 🚀
 
-You can now register your Stimulus controllers using Vite's [globEager] and the `registerControllers` helper:
+You can now register your Stimulus controllers using Vite's [globEager] and the `loadControllers` helper:
 
 ```ts
 import { Application } from 'stimulus'
-import { registerControllers } from 'stimulus-vite-helpers'
+import { loadControllers } from 'stimulus-vite-helpers-2'
 
 const application = Application.start()
 const controllers = import.meta.globEager('./**/*_controller.js')
-registerControllers(application, controllers)
+loadControllers(application, controllers)
 ```
 
 If you are using controllers within `view_component` sidecar directories, the identifiers for these controllers might become lengthy and unclear
@@ -60,7 +59,7 @@ If you are using controllers within `view_component` sidecar directories, the id
 
 Enabling the `{ nestedMode: true }` flag removes the duplicated part of the controller identifier
 ```js
-registerControllers(application, controllers, { nestedMode: true });
+loadControllers(application, controllers, { nestedMode: true });
 // default
 //=> ui--button-component--button-component
 

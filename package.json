@@ -1,9 +1,9 @@
 {
-  "name": "stimulus-vite-helpers",
+  "name": "stimulus-vite-helpers-2",
   "version": "3.0.2",
   "description": "Vite.js helpers for the Stimulus JavaScript framework",
   "license": "MIT",
-  "author": "Máximo Mussini <maximomussini@gmail.com>",
+  "author": "Serhii Jun <serhii.jun@gmail.com>",
   "files": [
     "dist"
   ],
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElMassimo/stimulus-vite-helpers"
+    "url": "https://github.com/thecodingbrew/stimulus-vite-helpers-2"
   },
-  "homepage": "https://github.com/ElMassimo/stimulus-vite-helpers",
-  "bugs": "https://github.com/ElMassimo/stimulus-vite-helpers/issues",
+  "homepage": "https://github.com/thecodingbrew/stimulus-vite-helpers-2",
+  "bugs": "https://github.com/thecodingbrew/stimulus-vite-helpers-2/issues",
   "keywords": [
     "stimulus",
     "stimulusjs",

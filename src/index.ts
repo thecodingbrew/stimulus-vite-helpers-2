@@ -3,9 +3,10 @@ import type { ImportedModules, Entry } from './types'
 
 export const CONTROLLER_FILENAME_REGEX = /^(?:.*?(?:controllers|components)\/|\.?\.\/)?(.+)(?:[/_-]controller\..+?)$/
 
-export function registerControllers (application: Application, controllerModules: ImportedModules, options: { nestedMode: boolean }): void {
+export function loadControllers (application: Application, controllerModules: ImportedModules, options: { nestedMode: boolean }): void {
   const { nestedMode } = options
-  application.load(definitionsFromGlob(controllerModules, nestedMode))
+  const definitions = definitionsFromGlob(controllerModules, nestedMode)
+  application.load(definitions)
 }
 
 export function definitionsFromGlob (controllerModules: ImportedModules, nestedMode: boolean): Definition [] {

@@ -1,5 +1,9 @@
 [Stimulus HMR plugin]: https://github.com/ElMassimo/vite-plugin-stimulus-hmr
 
+## stimulus-vite-helpers 3.0.3 (2023-08-19)
+
+- Fix undefined nestedMode param when {nestedMode: boolean} is not passed
+
 ## stimulus-vite-helpers 3.0.2 (2023-08-17)
 
 - Add an optional parameter, { nestedMode: true }, to reduce controller identifier length.
